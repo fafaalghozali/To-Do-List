@@ -1,0 +1,149 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #8dbcefc1 !important;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Main Section Styling */
+.main-section {
+  width: 90%;
+  max-width: 400px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s; /* Smooth effect on hover */
+}
+
+.main-section:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+}
+
+/* Add Section Styling */
+.add-section {
+  margin-bottom: 20px;
+}
+
+.add-section input[type="text"],
+.add-section input[type="date"],
+.add-section select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  background-color: #f9fafb; /* Soft input background */
+  transition: border-color 0.3s;
+}
+
+.add-section input:focus,
+.add-section select:focus {
+  border-color: #3b82f6; /* Blue highlight on focus */
+  outline: none;
+}
+
+.add-section button {
+  width: 100%;
+  padding: 12px;
+  background-color: #3b82f6;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.add-section button:hover {
+  background-color: #2563eb; /* Slightly darker blue on hover */
+}
+
+.add-section button:active {
+  transform: scale(0.98); /* Press effect */
+}
+
+/* Show To-Do Section Styling */
+.show-todo-section {
+  margin-top: 20px;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Light shadow for clean separation */
+  transition: background-color 0.3s;
+}
+
+.todo-item:hover {
+  background-color: #ccd2da; /* Light hover effect */
+}
+
+.todo-item h2 {
+  font-size: 16px;
+  margin: 0;
+  color: #333;
+  flex: 1;
+}
+
+.todo-item h2.checked {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.todo-item small {
+  font-size: 12px;
+  color: #888;
+}
+
+.todo-item .remove-to-do {
+  color: #ef4444; /* Red delete button */
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: color 0.3s;
+}
+
+.todo-item .remove-to-do:hover {
+  color: #dc2626; /* Darker red on hover */
+}
+
+.check-box {
+  transform: scale(1.2);
+  margin-right: 10px;
+}
+
+/* Responsive Styling */
+@media (max-width: 500px) {
+  .main-section {
+    padding: 15px;
+  }
+  .add-section input[type="text"],
+  .add-section input[type="date"],
+  .add-section select,
+  .add-section button {
+    font-size: 14px;
+  }
+  .todo-item h2 {
+    font-size: 14px;
+  }
+}
